@@ -1,0 +1,8 @@
+version: "2.0" # docker compose 파일의 버전
+services: 
+  python-app:
+    build: ./main
+  hello-app:
+    build: ./hello
+    depends_on:
+      - python-app
